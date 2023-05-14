@@ -8,9 +8,7 @@ import Navbar from '../Navbar/Navbar';
 const Home = () => {
     return (
         <div>        
-            <Navbar></Navbar>    
-            <Outlet></Outlet>
-            <Footer></Footer>                      
+            <AllBooks></AllBooks>
                                  
         </div>
     );
