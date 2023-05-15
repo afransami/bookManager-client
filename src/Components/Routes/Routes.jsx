@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {createBrowserRouter} from "react-router-dom";
+import EditBooks from '../EditBooks/EditBooks';
 import Home from '../Home/Home';
 import Main from '../Layouts/Main';
 import ManageBooks from '../ManageBooks/ManageBooks';
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {        
         path:'manageBooks',
         element: <ManageBooks></ManageBooks>,
+      },
+      {        
+        path:'editbooks/:id',
+        element: <EditBooks></EditBooks>
       },
       
     ]

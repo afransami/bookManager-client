@@ -1,10 +1,6 @@
-import React, { useState } from "react";
 import { Form } from "react-router-dom";
 
-const UploadBook = ({ book }) => {
-  // const {id}= useParams();
-  // const {authorName, bookName, bookPdfUrl, categoryName, metaTextDescription, imageUrl, _id} =book
-  const [allBooks, setAllBooks] = useState([]);
+const UploadBook = () => {
 
   const handleBookUpload = (event) => {
     event.preventDefault();
@@ -16,15 +12,15 @@ const UploadBook = ({ book }) => {
     const bookPdfUrl = form.bookPdfUrl.value;
     const imageUrl = form.imageUrl.value;
 
-    const booking = { bookName, authorName, bookPdfUrl, imageUrl, categoryName, metaTextDescription };
-    console.log(booking);
+    const book = { bookName, authorName, bookPdfUrl, imageUrl, categoryName, metaTextDescription };
+    console.log(book);
 
     fetch("http://localhost:5000/upload-book", {
       method: "post",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(booking),
+      body: JSON.stringify(book),
     })
       .then((res) => res.json())
       .then((data) => console.log(data));
