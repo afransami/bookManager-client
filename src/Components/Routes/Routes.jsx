@@ -3,7 +3,9 @@ import React from 'react';
 import {createBrowserRouter} from "react-router-dom";
 import Home from '../Home/Home';
 import Main from '../Layouts/Main';
-import UpdateData from '../UpdateData/UpdateData';
+import ManageBooks from '../ManageBooks/ManageBooks';
+import UploadBook from '../UploadBook/UploadBook';
+
 
 const router = createBrowserRouter([
   {
@@ -15,9 +17,18 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path:'/updateData/:id',
-        element:<UpdateData></UpdateData>,
-      }
+        path:'uploadBook',        
+        element: <UploadBook></UploadBook>,
+      },
+      {        
+        path:'/uploadBook/:id',
+        element: <UploadBook></UploadBook>,
+      },
+      {        
+        path:'manageBooks',
+        element: <ManageBooks></ManageBooks>,
+      },
+      
     ]
 
   },
