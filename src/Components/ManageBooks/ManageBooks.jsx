@@ -52,7 +52,8 @@ const handleDelete=(id) =>{
                 <td>{book.categoryName}</td>
                 <td className='gap-4 flex'>
                     <button onClick={()=>handleDelete(book._id)} className='btn btn-warning btn-outline'>Delete</button>                    
-                    <Link to={`manageBooks/editbooks/${book._id}`} className='btn btn-info btn-outline'>Update</Link>                    
+                    <Link to={`/editBooks/${book._id}`} className='btn btn-info btn-outline'>Update</Link>                   
+                                      
                 </td>
                 
             </tr>
